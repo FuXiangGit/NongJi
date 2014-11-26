@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+    <color name="navvigation_bg">#333</color>
+    <color name="actionbar_bg">#2182D6</color>
+    <color name="blue">#0000FF</color>
+    <color name="stroke">#CCCCCC</color>
+    <color name="file_button_normal_bg">#59B93B</color>
+    <color name="file_button_pressed_bg">#79D65B</color>
+    <color name="upload_button_pressed">#289CFF</color>
+    <color name="small_title_layout">#ffeeeeee</color>
+    <color name="bg_white">#fff5f5f5</color>
+    <color name="text_content_white">#fff5f5f5</color>
+    <color name="title_layout">#ff2182d6</color>
+    <color name="list_color">#BFEFFF</color>
+    
+
+</resources>
