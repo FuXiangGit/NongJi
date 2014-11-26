@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+
+    <LinearLayout
+        android:id="@+id/mainsearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/spmeters"
+                android:layout_width="99dip"
+                android:layout_height="wrap_content"
+                android:dropDownVerticalOffset="2dip"
+                android:text="公里数" >
+            </Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="户名" >
+            </TextView>
+
+            <!--
+                 <AutoCompleteTextView
+                android:id="@+id/searchkey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.88"
+                android:text="张三" />
+            -->
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="90dip"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+            <Spinner
+                android:id="@+id/zhuangtai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dropDownVerticalOffset="2dip"
+                android:dropDownWidth="90dip"
+                 >
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手机号" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="140dip"
+                android:layout_height="match_parent"
+                android:maxLength="11"
+                android:inputType="phone"
+                 />
+
+            <LinearLayout
+                android:id="@+id/isxsND"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="农地类型" >
+                </TextView>
+
+                 <Spinner
+                        android:id="@+id/btn_nd"
+                        android:layout_width="match_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:text="轮麦收割" >
+                    </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/isxsNJ"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="农机类型" >
+                </TextView>
+
+                <Spinner
+                        android:id="@+id/spcar"
+                        android:layout_width="match_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:text="轮麦收割" >
+                    </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:onClick="searchButtonProcess"
+                android:padding="10dip"
+                android:textSize="13sp"
+                android:text="查询/刷新" />
+
+            <Button
+                android:id="@+id/map_before_data"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:onClick="goToBeforePage"
+                android:padding="10dip"
+                android:text="上一组" />
+            <Button
+                android:id="@+id/map_next_data"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:onClick="goToNextPage"
+                android:padding="10dip"
+                android:text="下一组" />
+
+            <Button
+                android:id="@+id/btnlist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="12"
+                android:padding="10dip"
+                android:onClick="ShowList"
+                android:text="列表" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/mainsearch"
+        class="com.baidu.mapapi.map.SupportMapFragment" />
+
+    <LinearLayout
+        android:id="@+id/liebiao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mainsearch"
+        android:visibility="gone"
+        android:background="@color/list_color"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/userlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/zhuce"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</RelativeLayout>

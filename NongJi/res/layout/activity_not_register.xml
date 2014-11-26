@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_white" >
+
+    <RelativeLayout
+        android:id="@+id/title_video_list"
+        style="@style/title_layout" >
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/style_btn_back" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/title_txt"
+            android:text="注册" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_video_list" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dip"
+                android:layout_margin="12.0dip"
+                android:background="@drawable/login_input_bg"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <!--
+                     <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:background="@drawable/input_split" />
+                -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip" >
+
+                    <EditText
+                        android:id="@+id/random"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:hint="@string/input_random"
+                        android:inputType="phone"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:textSize="16.0sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12.0dip"
+                android:background="@drawable/login_input_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip" >
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:hint="@string/input_unicom_number"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:singleLine="true"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:id="@+id/getRandom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:maxLength="11"
+                        android:src="@drawable/selector_btn_get_random_press"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:background="@drawable/input_split" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginRight="4dip"
+                        android:gravity="center"
+                        android:text="@string/username" />
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:hint="@string/input_username"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:singleLine="true"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:background="@drawable/input_split" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginRight="4dip"
+                        android:gravity="center"
+                        android:text="@string/password" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:hint="@string/input_password"
+                        android:inputType="textPassword"
+                        android:maxLength="18"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:singleLine="true"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:background="@drawable/input_split" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginRight="4dip"
+                        android:gravity="center"
+                        android:text="@string/passwordagain" />
+
+                    <EditText
+                        android:id="@+id/okpass"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:hint="@string/input_password"
+                        android:inputType="textPassword"
+                        android:maxLength="18"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:singleLine="true"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:background="@drawable/input_split" />
+
+                <LinearLayout
+                    android:id="@+id/nonghucansee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginRight="4dip"
+                        android:gravity="center"
+                        android:text="@string/zhongzhimianji" />
+
+                    <EditText
+                        android:id="@+id/plateNO"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:hint="平米"
+                        android:paddingLeft="12.0dip"
+                        android:paddingRight="12.0dip"
+                        android:inputType="number"
+                        android:textSize="16.0sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="12.0dip"
+                    android:layout_marginRight="12.0dip"
+                    android:background="@drawable/input_split" />
+
+                <LinearLayout
+                    android:id="@+id/nongjileixing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginRight="4dip"
+                        android:gravity="center"
+                        android:text="农机类型" />
+
+                    <Spinner
+                        android:id="@+id/spcar"
+                        android:layout_width="match_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_marginRight="12.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:text="轮麦收割" >
+                    </Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nongdileixing"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:layout_marginLeft="4dip"
+                        android:layout_marginRight="4dip"
+                        android:gravity="center"
+                        android:text="农地类型" />
+
+                    <Button
+                        android:id="@+id/btn_nd"
+                        android:layout_width="match_parent"
+                        android:layout_height="45.0dip"
+                        android:layout_marginRight="12.0dip"
+                        android:text="农地类型" 
+                        android:textSize="18sp"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12.0dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/register_free"
+                    android:layout_width="220.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="6.0dip"
+                    android:background="@drawable/button_"
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip"
+                    android:text="注    册"
+                    android:textColor="@color/text_content_white"
+                    android:textSize="18.0sp" />
+
+                <Button
+                    android:id="@+id/btn_consel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="6.0dip"
+                    android:background="@drawable/button_"
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip"
+                    android:text="返    回"
+                    android:textColor="@color/text_content_white"
+                    android:textSize="18.0sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reg_vip_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:padding="5.0dip"
+                android:text="@string/register_free_tip_txt"
+                android:textColor="@color/black"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

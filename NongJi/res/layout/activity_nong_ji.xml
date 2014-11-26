@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NongJiActivity" >
+
+    <Button
+        android:id="@+id/btn_myLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="进入地图"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_xiugai"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="密码修改"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_state"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="信息修改"
+        android:textSize="16sp" />
+
+    <!-- <WebView
+        android:id="@+id/main_web_view"
+        android:background="@drawable/upload_default_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         />
+ -->
+
+    <com.nongji.tools.ProgressWebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>
